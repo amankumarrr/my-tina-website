@@ -30,7 +30,7 @@ export const IconPickerInput = wrapFieldsWithMeta(({ input }) => {
   const InputIcon = IconOptions[input.value] ? IconOptions[input.value] : null;
 
   return (
-    <div className='relative z-[1000]'>
+    <div className='relative z-1000'>
       <input type='text' id={input.name} className='hidden' {...input} />
       <Popover>
         {({ open }) => (
@@ -53,7 +53,7 @@ export const IconPickerInput = wrapFieldsWithMeta(({ input }) => {
               >
                 <PopoverPanel className='relative overflow-hidden rounded-lg shadow-lg bg-white border border-gray-150 z-50'>
                   {({ close }) => (
-                    <div className='max-h-[24rem] flex flex-col w-full h-full'>
+                    <div className='max-h-96 flex flex-col w-full h-full'>
                       <div className='bg-gray-50 p-2 border-b border-gray-100 z-10 shadow-sm'>
                         <input
                           type='text'

@@ -110,7 +110,7 @@ export default function PostsClientPage(props: ClientPostProps) {
                   {post.heroImg && (
                     <div className="order-first sm:order-last sm:col-span-5">
                       <Link href={post.url} className="block">
-                        <div className="aspect-[16/9] overflow-clip rounded-lg border border-border">
+                        <div className="aspect-video overflow-clip rounded-lg border border-border">
                           <Image
                             width={533}
                             height={300}
