@@ -25,8 +25,8 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: "Tina",
-  description: "Tina Cloud Starter",
+  title: "Aman Kumar - Software Engineer Portfolio",
+  description: "Portfolio of Aman Kumar - A results-driven IT professional with hands-on experience in full-stack development and cloud platforms, specializing in software engineering with applied AI.",
 };
 
 export default function RootLayout({
