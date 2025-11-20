@@ -1,12 +1,12 @@
 import type { Collection } from 'tinacms';
-import { heroBlockSchema } from '@/components/blocks/hero';
-import { contentBlockSchema } from '@/components/blocks/content';
-import { testimonialBlockSchema } from '@/components/blocks/testimonial';
-import { featureBlockSchema } from '@/components/blocks/features';
-import { videoBlockSchema } from '@/components/blocks/video';
-import { calloutBlockSchema } from '@/components/blocks/callout';
-import { statsBlockSchema } from '@/components/blocks/stats';
-import { ctaBlockSchema } from '@/components/blocks/call-to-action';
+import { heroBlockSchema } from '@/src/components/blocks/hero';
+import { contentBlockSchema } from '@/src/components/blocks/content';
+import { testimonialBlockSchema } from '@/src/components/blocks/testimonial';
+import { featureBlockSchema } from '@/src/components/blocks/features';
+import { videoBlockSchema } from '@/src/components/blocks/video';
+import { calloutBlockSchema } from '@/src/components/blocks/callout';
+import { statsBlockSchema } from '@/src/components/blocks/stats';
+import { ctaBlockSchema } from '@/src/components/blocks/call-to-action';
 
 const Page: Collection = {
   label: 'Pages',
