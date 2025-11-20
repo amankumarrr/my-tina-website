@@ -5,10 +5,10 @@ import { format } from 'date-fns';
 import { tinaField, useTina } from 'tinacms/dist/react';
 import { TinaMarkdown } from 'tinacms/dist/rich-text';
 import { PostQuery } from '@/tina/__generated__/types';
-import { useLayout } from '@/src/components/layout/layout-context';
-import { Section } from '@/src/components/layout/section';
-import { components } from '@/src/components/mdx-components';
-import ErrorBoundary from '@/src/components/error-boundary';
+import { useLayout } from '@/components/layout/layout-context';
+import { Section } from '@/components/layout/section';
+import { components } from '@/components/mdx-components';
+import ErrorBoundary from '@/components/error-boundary';
 
 const titleColorClasses = {
   blue: 'from-blue-400 to-blue-600 dark:from-blue-300 dark:to-blue-500',
