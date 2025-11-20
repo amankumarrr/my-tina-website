@@ -5,11 +5,11 @@ import Image from 'next/image';
 import { format } from 'date-fns';
 import { TinaMarkdown } from 'tinacms/dist/rich-text';
 import { PostConnectionQuery, PostConnectionQueryVariables } from '@/tina/__generated__/types';
-import ErrorBoundary from '@/src/components/error-boundary';
+import ErrorBoundary from '@/components/error-boundary';
 import { ArrowRight, UserRound } from 'lucide-react';
-import { Card } from '@/src/components/ui/card';
-import { Section } from '@/src/components/layout/section';
-import { Avatar, AvatarFallback, AvatarImage } from '@/src/components/ui/avatar';
+import { Card } from '@/components/ui/card';
+import { Section } from '@/components/layout/section';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 interface ClientPostProps {
   data: PostConnectionQuery;
