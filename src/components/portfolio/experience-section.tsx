@@ -57,8 +57,8 @@ export const ExperienceSection = ({ experiences }: ExperienceSectionProps) => {
                       <ul className="space-y-1">
                         {exp.highlights.map((highlight, i) => (
                           <li key={i} className="text-sm text-muted-foreground flex items-start gap-2">
-                            <span className="text-primary mt-1.5">•</span>
-                            <span>{highlight}</span>
+                            <span className="text-primary shrink-0 mt-0.5">•</span>
+                            <span className="flex-1">{highlight}</span>
                           </li>
                         ))}
                       </ul>
@@ -70,8 +70,8 @@ export const ExperienceSection = ({ experiences }: ExperienceSectionProps) => {
                       <ul className="space-y-1">
                         {exp.internalProducts.map((item, i) => (
                           <li key={i} className="text-sm text-muted-foreground flex items-start gap-2">
-                            <span className="text-primary mt-1.5">•</span>
-                            <span>{item}</span>
+                            <span className="text-primary shrink-0 mt-0.5">•</span>
+                            <span className="flex-1">{item}</span>
                           </li>
                         ))}
                       </ul>
