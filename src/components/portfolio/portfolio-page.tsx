@@ -244,7 +244,7 @@ const PortfolioPage = () => {
               className="flex justify-center gap-6 pt-8"
             >
               <motion.a
-                href="https://github.com"
+                href="https://github.com/amankumarrr"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1, y: -2 }}
@@ -254,7 +254,7 @@ const PortfolioPage = () => {
                 <Github className="w-5 h-5" />
               </motion.a>
               <motion.a
-                href="https://linkedin.com"
+                href="https://linkedin.com/in/aman-kumar-84842060/"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1, y: -2 }}
