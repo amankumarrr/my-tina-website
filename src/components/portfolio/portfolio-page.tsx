@@ -10,9 +10,10 @@ import { ExperienceSection } from './experience-section';
 import { EducationSection } from './education-section';
 import { PersonalAttributesSection } from './personal-attributes-section';
 import { ContactSection } from './contact-section';
-import {
+import { 
   technicalSkills,
-  projects,
+  clientProjects,
+  internalProducts,
   experiences,
   certifications,
   education,
@@ -26,7 +27,7 @@ const PortfolioPage = () => {
       <AboutSection />
       <SkillsSection technicalSkills={technicalSkills} />
       <CertificationsSection certifications={certifications} />
-      <ProjectsSection projects={projects} />
+      <ProjectsSection clientProjects={clientProjects} internalProducts={internalProducts} />
       <ExperienceSection experiences={experiences} />
       <EducationSection education={education} />
       <PersonalAttributesSection />

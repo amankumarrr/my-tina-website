@@ -16,13 +16,14 @@ export const technicalSkills: TechnicalSkills = {
   'CDNs': ['Azure Front Door', 'Cloudflare'],
 };
 
-export const projects: Project[] = [
+export const clientProjects: Project[] = [
   {
     title: 'Medical Sector Web Application',
     description: 'Developed a web application for medical practitioners to manage patient services, including service types, deliveries, stakeholder reporting, task assignments, and billing.',
     tech: ['.NET', 'Angular', 'SQL Server'],
     link: '#',
     github: '#',
+    category: 'client',
   },
   {
     title: 'Healthcare Ticket Management System',
@@ -30,6 +31,7 @@ export const projects: Project[] = [
     tech: ['Angular', '.NET', 'SQL Server'],
     link: '#',
     github: '#',
+    category: 'client',
   },
   {
     title: 'Tourism Onboarding Automation',
@@ -37,6 +39,42 @@ export const projects: Project[] = [
     tech: ['Power Automate', 'Dataverse'],
     link: '#',
     github: '#',
+    category: 'client',
+  },
+];
+
+export const internalProducts: Project[] = [
+  {
+    title: 'Portfolio Website with TinaCMS',
+    description: 'Built a modern portfolio website using Next.js, React, and TinaCMS for content management. Features include dynamic blog posts, responsive design, and seamless content editing experience.',
+    tech: ['Next.js', 'React', 'TinaCMS', 'Tailwind CSS', 'TypeScript'],
+    link: '#',
+    github: '#',
+    category: 'internal',
+  },
+  {
+    title: 'Azure Infrastructure Automation',
+    description: 'Developed automated infrastructure deployment pipelines using Bicep and Azure CLI. Streamlined resource provisioning and configuration management for cloud environments.',
+    tech: ['Bicep', 'Azure CLI', 'GitHub Actions', 'Azure Pipelines'],
+    link: '#',
+    github: '#',
+    category: 'internal',
+  },
+  {
+    title: 'CI/CD Pipeline with Cloudflare Workers',
+    description: 'Implemented CI/CD pipelines integrated with GitHub and Cloudflare Workers for automated deployments and edge computing capabilities.',
+    tech: ['GitHub Actions', 'Cloudflare Workers', 'Docker', 'Node.js'],
+    link: '#',
+    github: '#',
+    category: 'internal',
+  },
+  {
+    title: 'Dummy Project - AI-Powered Code Assistant',
+    description: 'A proof-of-concept application that leverages AI to assist developers with code generation, refactoring suggestions, and documentation. Built with modern web technologies and AI APIs.',
+    tech: ['Next.js', 'React', 'OpenAI API', 'TypeScript', 'Tailwind CSS'],
+    link: '#',
+    github: '#',
+    category: 'internal',
   },
 ];
 

@@ -4,6 +4,7 @@ export interface Project {
   tech: string[];
   link: string;
   github: string;
+  category?: 'client' | 'internal';
 }
 
 export interface Experience {
