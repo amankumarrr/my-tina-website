@@ -191,7 +191,7 @@ const PortfolioPage = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="text-xl sm:text-2xl text-muted-foreground max-w-2xl mx-auto"
+              className="text-xl sm:text-xl text-muted-foreground max-w-2xl mx-auto"
             >
               Software Engineer | Full-Stack Developer | Cloud & AI Enthusiast
             </motion.p>
