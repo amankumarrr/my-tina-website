@@ -1,7 +1,8 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'motion/react';
+import Lenis from 'lenis';
 import { 
   Code, 
   Github, 
@@ -20,10 +21,110 @@ import {
   Clock,
   BookOpen
 } from 'lucide-react';
+import { 
+  SiSharp, 
+  SiPhp, 
+  SiNextdotjs, 
+  SiReact, 
+  SiAngular, 
+  SiJquery, 
+  SiNodedotjs, 
+  SiDotnet, 
+  SiCodeigniter, 
+  SiMysql, 
+  SiBootstrap, 
+  SiTailwindcss, 
+  SiWordpress, 
+  SiGithubactions, 
+  SiJira, 
+  SiOpenai, 
+  SiGoogle, 
+  SiSupabase, 
+  SiVercel, 
+  SiCloudflare,
+  SiJavascript,
+  SiTypescript,
+  SiHtml5,
+  SiCss3,
+  SiGit,
+  SiDocker
+} from 'react-icons/si';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
+// Skill icon mapping with colors
+const skillIcons: Record<string, { icon: React.ComponentType<{ className?: string }>, color: string }> = {
+  'C#': { icon: SiSharp, color: '#239120' },
+  'PowerShell': { icon: Code, color: '#012456' },
+  'PHP': { icon: SiPhp, color: '#777BB4' },
+  'Next.js': { icon: SiNextdotjs, color: '#000000' },
+  'React': { icon: SiReact, color: '#61DAFB' },
+  'Angular': { icon: SiAngular, color: '#DD0031' },
+  'AngularJS': { icon: SiAngular, color: '#E23237' },
+  'jQuery': { icon: SiJquery, color: '#0769AD' },
+  'Node.js': { icon: SiNodedotjs, color: '#339933' },
+  '.NET Framework MVC': { icon: SiDotnet, color: '#512BD4' },
+  '.NET 6': { icon: SiDotnet, color: '#512BD4' },
+  'CodeIgniter 4': { icon: SiCodeigniter, color: '#EF4223' },
+  'Playwright': { icon: Code, color: '#2EAD33' },
+  'xUnit': { icon: Code, color: '#8B5CF6' },
+  'SQL': { icon: Code, color: '#336791' },
+  'MySQL': { icon: SiMysql, color: '#4479A1' },
+  'Bootstrap 3': { icon: SiBootstrap, color: '#7952B3' },
+  'Bootstrap 4': { icon: SiBootstrap, color: '#7952B3' },
+  'Tailwind': { icon: SiTailwindcss, color: '#06B6D4' },
+  'WordPress': { icon: SiWordpress, color: '#21759B' },
+  'TinaCMS': { icon: Code, color: '#EC4815' },
+  'VMs': { icon: Code, color: '#0078D4' },
+  'App Service': { icon: Code, color: '#0078D4' },
+  'Key Vault': { icon: Code, color: '#0078D4' },
+  'App Insights': { icon: Code, color: '#0078D4' },
+  'Bicep': { icon: Code, color: '#0078D4' },
+  'Blob Storage': { icon: Code, color: '#0078D4' },
+  'Entra ID': { icon: Code, color: '#0078D4' },
+  'Container Apps': { icon: Code, color: '#0078D4' },
+  'Function Apps': { icon: Code, color: '#0078D4' },
+  'Azure Pipelines': { icon: Code, color: '#0078D4' },
+  'GitHub Actions': { icon: SiGithubactions, color: '#2088FF' },
+  'DevOps': { icon: Code, color: '#0E8E3E' },
+  'GitHub Issues': { icon: Github, color: '#181717' },
+  'Jira': { icon: SiJira, color: '#0052CC' },
+  'ChatGPT': { icon: SiOpenai, color: '#412991' },
+  'Gemini': { icon: SiGoogle, color: '#4285F4' },
+  'n8n': { icon: Code, color: '#FF6D5A' },
+  'Cursor': { icon: Code, color: '#000000' },
+  'Supabase': { icon: SiSupabase, color: '#3ECF8E' },
+  'Vercel': { icon: SiVercel, color: '#000000' },
+  'Azure Front Door': { icon: Code, color: '#0078D4' },
+  'Cloudflare': { icon: SiCloudflare, color: '#F38020' },
+};
+
 const PortfolioPage = () => {
+  // Initialize Lenis smooth scroll
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      orientation: 'vertical',
+      gestureOrientation: 'vertical',
+      smoothWheel: true,
+      wheelMultiplier: 1,
+      touchMultiplier: 2,
+      infinite: false,
+    });
+
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
+
   const technicalSkills = {
     'Programming Languages': ['C#', 'PowerShell', 'PHP'],
     'JavaScript Frameworks': ['Next.js', 'React', 'Angular', 'AngularJS', 'jQuery', 'Node.js'],
@@ -342,49 +443,178 @@ const PortfolioPage = () => {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-24">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="skills" className="py-24 relative overflow-hidden">
+        {/* Animated background gradient */}
+        <div className="absolute inset-0 bg-linear-to-br from-primary/5 via-transparent to-primary/5" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]" />
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl sm:text-5xl font-bold mb-4">Technical Skills</h2>
-            <p className="text-lg text-muted-foreground">
+            <motion.h2 
+              className="text-4xl sm:text-5xl font-bold mb-4 bg-linear-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+            >
+              Technical Skills
+            </motion.h2>
+            <motion.p 
+              className="text-lg text-muted-foreground"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+            >
               Technologies and tools I work with to bring ideas to life
-            </p>
+            </motion.p>
           </motion.div>
           
-          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {Object.entries(technicalSkills).map(([category, skills], categoryIndex) => (
               <motion.div
                 key={category}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: categoryIndex * 0.1 }}
-                whileHover={{ scale: 1.02, y: -5 }}
+                initial={{ opacity: 0, y: 50, rotateX: -15 }}
+                whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ 
+                  delay: categoryIndex * 0.1,
+                  type: "spring",
+                  stiffness: 100,
+                  damping: 15
+                }}
+                whileHover={{ 
+                  scale: 1.05, 
+                  y: -10,
+                  rotateY: 5,
+                  transition: { duration: 0.3 }
+                }}
+                className="perspective-1000"
               >
-                <Card className="h-full">
-                  <CardHeader>
-                    <CardTitle className="text-lg">{category}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="flex flex-wrap gap-2">
-                      {skills.map((skill, index) => (
-                        <motion.span
-                          key={skill}
-                          initial={{ opacity: 0, scale: 0.8 }}
-                          whileInView={{ opacity: 1, scale: 1 }}
-                          viewport={{ once: true }}
-                          transition={{ delay: categoryIndex * 0.1 + index * 0.05 }}
-                          className="px-3 py-1 text-sm bg-muted rounded-md border"
-                        >
-                          {skill}
-                        </motion.span>
-                      ))}
-                    </div>
+                  <Card className="h-full border-2 hover:border-primary/50 transition-all duration-300 bg-card/50 backdrop-blur-sm shadow-lg hover:shadow-2xl group">
+                    <CardHeader className="pb-3">
+                      <motion.div
+                        initial={{ scale: 0.8, opacity: 0 }}
+                        whileInView={{ scale: 1, opacity: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: categoryIndex * 0.1 + 0.2 }}
+                        className="flex items-center gap-2"
+                      >
+                        <div className="p-2 rounded-lg bg-linear-to-br from-primary/20 to-primary/5 group-hover:from-primary/30 group-hover:to-primary/10 transition-all duration-300">
+                          <Code className="w-5 h-5 text-primary" />
+                        </div>
+                        <CardTitle className="text-lg group-hover:text-primary transition-colors">
+                          {category}
+                        </CardTitle>
+                      </motion.div>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="flex flex-wrap gap-3">
+                        {skills.map((skill, index) => {
+                          const skillData = skillIcons[skill] || { icon: Code, color: '#6B7280' };
+                          const IconComponent = skillData.icon;
+                          const iconColor = skillData.color;
+                          
+                          return (
+                            <motion.div
+                              key={skill}
+                              initial={{ opacity: 0, scale: 0, rotate: -180 }}
+                              whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+                              viewport={{ once: true }}
+                              transition={{ 
+                                delay: categoryIndex * 0.1 + index * 0.05,
+                                type: "spring",
+                                stiffness: 200,
+                                damping: 15
+                              }}
+                              whileHover={{ 
+                                scale: 1.15, 
+                                rotate: [0, -10, 10, -10, 0],
+                                y: -5,
+                                transition: { duration: 0.5 }
+                              }}
+                              className="relative group/skill"
+                            >
+                              <motion.div
+                                className="flex items-center gap-2 px-4 py-2.5 rounded-lg border-2 bg-linear-to-br from-background to-muted/30 hover:from-muted/50 hover:to-muted/30 transition-all duration-300 cursor-pointer overflow-hidden relative"
+                                style={{ borderColor: `${iconColor}40` }}
+                                whileHover={{ 
+                                  borderColor: iconColor,
+                                  boxShadow: `0 0 20px ${iconColor}40`
+                                }}
+                              >
+                                {/* Animated background glow */}
+                                <motion.div
+                                  className="absolute inset-0 opacity-0 group-hover/skill:opacity-100 transition-opacity duration-300"
+                                  style={{
+                                    background: `linear-gradient(135deg, ${iconColor}15, transparent)`
+                                  }}
+                                />
+                                
+                                {/* Icon with rotation animation */}
+                                <motion.div
+                                  className="relative z-10"
+                                  animate={{
+                                    rotate: [0, 5, -5, 0],
+                                  }}
+                                  transition={{
+                                    duration: 3,
+                                    repeat: Infinity,
+                                    repeatDelay: 2,
+                                    ease: "easeInOut"
+                                  }}
+                                  style={{ color: iconColor }}
+                                >
+                                  <IconComponent 
+                                    className="w-5 h-5"
+                                  />
+                                </motion.div>
+                                
+                                {/* Skill name */}
+                                <span className="relative z-10 text-sm font-medium group-hover/skill:text-foreground transition-colors">
+                                  {skill}
+                                </span>
+                                
+                                {/* Floating particles effect on hover */}
+                                <motion.div
+                                  className="absolute inset-0 pointer-events-none"
+                                  initial={{ opacity: 0 }}
+                                  whileHover={{ opacity: 1 }}
+                                >
+                                  {[...Array(3)].map((_, i) => (
+                                    <motion.div
+                                      key={i}
+                                      className="absolute w-1 h-1 rounded-full"
+                                      style={{
+                                        backgroundColor: iconColor,
+                                        left: '50%',
+                                        top: '50%',
+                                      }}
+                                      animate={{
+                                        x: [0, (Math.random() - 0.5) * 100],
+                                        y: [0, (Math.random() - 0.5) * 100],
+                                        opacity: [0, 1, 0],
+                                        scale: [0, 1, 0],
+                                      }}
+                                      transition={{
+                                        duration: 1,
+                                        delay: i * 0.2,
+                                        repeat: Infinity,
+                                        repeatDelay: 2,
+                                      }}
+                                    />
+                                  ))}
+                                </motion.div>
+                              </motion.div>
+                            </motion.div>
+                          );
+                        })}
+                      </div>
                   </CardContent>
                 </Card>
               </motion.div>
