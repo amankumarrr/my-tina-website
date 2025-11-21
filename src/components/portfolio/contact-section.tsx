@@ -49,7 +49,7 @@ export const ContactSection = () => {
               </Button>
             </motion.a>
             <motion.a
-              href="https://linkedin.com"
+              href="https://linkedin.com/in/aman-kumar-84842060/"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
