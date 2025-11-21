@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { motion } from 'motion/react';
-import { Github, ExternalLink, Briefcase, Code2, ChevronLeft, ChevronRight, Lock } from 'lucide-react';
+import { Github, ExternalLink, Briefcase, Code2, ChevronLeft, ChevronRight, Lock, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import type { Project } from './types';
@@ -181,7 +181,7 @@ const ProjectCard = ({ project, index, category }: { project: Project; index: nu
         <div className="flex items-start justify-between gap-2">
           <div className="flex-1">
             {/* Category Badge */}
-            <div className="mb-2">
+            <div className="mb-2 flex items-center gap-2 flex-wrap">
               <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-muted text-muted-foreground border border-border">
                 {category === 'client' ? (
                   <>
@@ -194,6 +194,10 @@ const ProjectCard = ({ project, index, category }: { project: Project; index: nu
                     Internal Product
                   </>
                 )}
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20">
+                <Users className="w-3 h-3" />
+                Team Contribution
               </span>
             </div>
             <CardTitle className="mt-2">{project.title}</CardTitle>
@@ -257,7 +261,7 @@ export const ProjectsSection = ({ clientProjects, internalProducts }: ProjectsSe
         >
           <h2 className="text-4xl sm:text-5xl font-bold mb-4">Featured Projects</h2>
           <p className="text-lg text-muted-foreground">
-            Client projects and internal products I've worked on
+            Projects I've contributed to as part of collaborative teams
           </p>
         </motion.div>
         
