@@ -36,6 +36,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={cn(fontSans.variable, nunito.variable, lato.variable)}>
+      <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       <body className="min-h-screen bg-background font-sans antialiased">
         <VideoDialogProvider>
           {children}

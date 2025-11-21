@@ -3,6 +3,7 @@ import React from "react";
 import Link from "next/link";
 import { Icon } from "../../icon";
 import { useLayout } from "../layout-context";
+import Image from "next/image";
 
 export const Footer = () => {
   const { globalSettings } = useLayout();
@@ -15,10 +16,7 @@ export const Footer = () => {
 
           <div className="order-last flex justify-center md:order-first md:justify-start">
             <Link href="/" aria-label="go home">
-              <Icon
-                parentColor={header!.color!}
-                data={header!.icon}
-              />
+              <Image src="/ak-logo.svg" alt="AK Logo" width={30} height={30} className="w-10 h-10" />
             </Link>
             <span className="self-center text-muted-foreground text-sm ml-2">© {new Date().getFullYear()} {header?.name}, All rights reserved</span>
           </div>

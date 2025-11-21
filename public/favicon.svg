@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="300" height="300" role="img" aria-label="AK circular logo">
+  <defs>
+    <clipPath id="clipA">
+      <!-- clip for negative-space A -->
+      <polygon points="30,90 48,30 66,90 58,90 52,70 42,70 36,90" />
+    </clipPath>
+  </defs>
+
+  <circle cx="60" cy="60" r="56" fill="#111827"/>
+  <!-- A as negative space -->
+  <g clip-path="url(#clipA)">
+    <rect x="0" y="0" width="120" height="120" fill="#ffffff"/>
+  </g>
+
+  <!-- K made of strokes -->
+  <g stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M76 36 L76 84" />
+    <path d="M76 56 L102 36" />
+    <path d="M76 56 L102 76" />
+  </g>
+</svg>

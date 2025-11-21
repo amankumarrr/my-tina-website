@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Icon } from "../../icon";
 import { useLayout } from "../layout-context";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 export const Header = () => {
   const { globalSettings, theme } = useLayout();
@@ -23,14 +24,7 @@ export const Header = () => {
                 href="/"
                 aria-label="home"
                 className="flex items-center space-x-2">
-                <Icon
-                  parentColor={header.color!}
-                  data={{
-                    name: header.icon!.name,
-                    color: header.icon!.color,
-                    style: header.icon!.style,
-                  }}
-                />{" "}
+                <Image src="/ak-logo.svg" alt="AK Logo" width={30} height={30} className="w-10 h-10" />
                 <span>
                   {header.name}
                 </span>
