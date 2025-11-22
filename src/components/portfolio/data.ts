@@ -20,7 +20,7 @@ export const clientProjects: Project[] = [
   {
     title: 'Medical Sector Web Application',
     description: 'Worked on a web application that enables medical practitioners to manage patient services, including service types, deliveries, stakeholder reporting, task assignments, and billing. Implemented SMTP server configuration in Node.js to send email notifications to stakeholders, and introduced telemetry features to enhance privacy and monitoring.',
-    tech: ['.NET', 'Angular', 'SQL Server'],
+    tech: ['.NET', 'Angular', 'SQL Server', 'Node.js', '.NET Framework', 'AngularJS', 'Boostrap', 'Azure Pipelines'],
     link: '#',
     github: '#',
     category: 'client',
@@ -62,7 +62,7 @@ export const internalProducts: Project[] = [
   {
     title: 'TinaDocs',
     description: 'Worked on a documentation website using Next.js, GitHub Actions, TinaCMS, Tailwind CSS, and TypeScript. It provides a seamless content editing experience and best for template to use for your technical documentation.',
-    tech: [ 'Next.js', 'GitHub Actions', 'TinaCMS', 'Tailwind CSS', 'TypeScript'],
+    tech: [ 'Next.js', 'GitHub Actions', 'TinaCMS', 'Tailwind CSS', 'TypeScript', 'Playwright', 'Pagefind'],
     link: 'https://tina.io/tinadocs/docs',
     github: 'https://github.com/tinacms/tinadocs',
     category: 'internal',
