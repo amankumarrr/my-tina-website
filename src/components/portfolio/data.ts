@@ -24,6 +24,7 @@ export const clientProjects: Project[] = [
     link: '#',
     github: '#',
     category: 'client',
+    isTeamContribution: true,
   },
   {
     title: 'Healthcare Ticket Management System',
@@ -32,6 +33,7 @@ export const clientProjects: Project[] = [
     link: '#',
     github: '#',
     category: 'client',
+    isTeamContribution: true,
   },
   {
     title: 'Tourism Onboarding Automation',
@@ -40,6 +42,7 @@ export const clientProjects: Project[] = [
     link: '#',
     github: '#',
     category: 'client',
+    isTeamContribution: false,
   },
 ];
 
@@ -54,6 +57,7 @@ export const internalProducts: Project[] = [
     link: 'https://www.ssw.com.au',
     github: 'https://github.com/SSWConsulting/SSW.Website',
     category: 'internal',
+    isTeamContribution: true,
   },
   {
     title: 'TinaDocs',
@@ -62,6 +66,7 @@ export const internalProducts: Project[] = [
     link: 'https://tina.io/tinadocs/docs',
     github: 'https://github.com/tinacms/tinadocs',
     category: 'internal',
+    isTeamContribution: true,
   },
 ];
 

@@ -195,10 +195,12 @@ const ProjectCard = ({ project, index, category }: { project: Project; index: nu
                   </>
                 )}
               </span>
-              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20">
-                <Users className="w-3 h-3" />
-                Team Contribution
-              </span>
+              {project.isTeamContribution && (
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20">
+                  <Users className="w-3 h-3" />
+                  Team Contribution
+                </span>
+              )}
             </div>
             <CardTitle className="mt-2">{project.title}</CardTitle>
           </div>

@@ -5,6 +5,7 @@ export interface Project {
   link: string;
   github: string;
   category?: 'client' | 'internal';
+  isTeamContribution?: boolean;
 }
 
 export interface Experience {
