@@ -32,6 +32,16 @@ const nextConfig: NextConfig = {
         source: '/(.*)',
         headers,
       },
+      {
+        source: '/',
+        headers: [
+          ...headers,
+          {
+            key: 'X-Robots-Tag',
+            value: 'noindex, nofollow',
+          },
+        ],
+      },
     ];
   },
   async rewrites() {
