@@ -19,7 +19,7 @@ export const technicalSkills: TechnicalSkills = {
 export const clientProjects: Project[] = [
   {
     title: 'Medical Sector Web Application',
-    description: 'Developed a web application for medical practitioners to manage patient services, including service types, deliveries, stakeholder reporting, task assignments, and billing.',
+    description: 'Worked on a web application that enables medical practitioners to manage patient services, including service types, deliveries, stakeholder reporting, task assignments, and billing. Implemented SMTP server configuration in Node.js to send email notifications to stakeholders, and introduced telemetry features to enhance privacy and monitoring.',
     tech: ['.NET', 'Angular', 'SQL Server'],
     link: '#',
     github: '#',
@@ -27,7 +27,7 @@ export const clientProjects: Project[] = [
   },
   {
     title: 'Healthcare Ticket Management System',
-    description: 'Built a ticket management system for a medical service provider to streamline the resolution of client-generated issues.',
+    description: 'Contributed to a claim management system designed for a medical service provider to streamline the handling of client-generated claims. Integrated multiple claim types into the existing platform, resolved issues related to claim assignments, and improved the overall claim search and processing workflow.',
     tech: ['Angular', '.NET', 'SQL Server'],
     link: '#',
     github: '#',
@@ -35,45 +35,32 @@ export const clientProjects: Project[] = [
   },
   {
     title: 'Tourism Onboarding Automation',
-    description: 'Automated the onboarding process for a tourism client using Power Automate, enhancing workflow efficiency and reducing manual effort.',
-    tech: ['Power Automate', 'Dataverse'],
+    description: 'Automated the onboarding process for a tourism client using Power Automate to improve workflow efficiency and minimize manual effort. Enabled seamless sign-in and enhanced the overall onboarding experience through integrated and streamlined steps.',
+    tech: ['Power Automate', 'Dataverse', 'Azure Function Apps', 'Dynamic F&O'],
     link: '#',
     github: '#',
     category: 'client',
   },
 ];
 
+
 export const internalProducts: Project[] = [
   {
-    title: 'Portfolio Website with TinaCMS',
-    description: 'Built a modern portfolio website using Next.js, React, and TinaCMS for content management. Features include dynamic blog posts, responsive design, and seamless content editing experience.',
-    tech: ['Next.js', 'React', 'TinaCMS', 'Tailwind CSS', 'TypeScript'],
-    link: '#',
-    github: '#',
+    title: 'SSW.Website',
+    description: 'Built a modern website using Next.js, React, TinaCMS, Tailwind CSS, TypeScript, Power Automate, and JotForm for content management. It provides a seamless content editing experience for the SSW team and fast loading time.',
+    tech: ['Next.js', 'TinaCMS', 'Tailwind CSS', 'TypeScript', 'Power Automate', 'JotForm', 'GitHub Actions', 'Azure Pipelines', 'Azure App Service', 'IaC', 'Cloudflare', 'Docker', 'Node.js',
+      'Azure key vault'
+    ],
+    link: 'https://www.ssw.com.au',
+    github: 'https://github.com/SSWConsulting/SSW.Website',
     category: 'internal',
   },
   {
-    title: 'Azure Infrastructure Automation',
-    description: 'Developed automated infrastructure deployment pipelines using Bicep and Azure CLI. Streamlined resource provisioning and configuration management for cloud environments.',
-    tech: ['Bicep', 'Azure CLI', 'GitHub Actions', 'Azure Pipelines'],
-    link: '#',
-    github: '#',
-    category: 'internal',
-  },
-  {
-    title: 'CI/CD Pipeline with Cloudflare Workers',
-    description: 'Implemented CI/CD pipelines integrated with GitHub and Cloudflare Workers for automated deployments and edge computing capabilities.',
-    tech: ['GitHub Actions', 'Cloudflare Workers', 'Docker', 'Node.js'],
-    link: '#',
-    github: '#',
-    category: 'internal',
-  },
-  {
-    title: 'Dummy Project - AI-Powered Code Assistant',
-    description: 'A proof-of-concept application that leverages AI to assist developers with code generation, refactoring suggestions, and documentation. Built with modern web technologies and AI APIs.',
-    tech: ['Next.js', 'React', 'OpenAI API', 'TypeScript', 'Tailwind CSS'],
-    link: '#',
-    github: '#',
+    title: 'TinaDocs',
+    description: 'Built a documentation website using Next.js, GitHub Actions, TinaCMS, Tailwind CSS, and TypeScript. It provides a seamless content editing experience and best for template to use for your technical documentation.',
+    tech: [ 'Next.js', 'GitHub Actions', 'TinaCMS', 'Tailwind CSS', 'TypeScript'],
+    link: 'https://tina.io/tinadocs/docs',
+    github: 'https://github.com/tinacms/tinadocs',
     category: 'internal',
   },
 ];
