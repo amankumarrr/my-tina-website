@@ -47,9 +47,9 @@ export const clientProjects: Project[] = [
 export const internalProducts: Project[] = [
   {
     title: 'SSW.Website',
-    description: 'Built a modern website using Next.js, React, TinaCMS, Tailwind CSS, TypeScript, Power Automate, and JotForm for content management. It provides a seamless content editing experience for the SSW team and fast loading time.',
+    description: 'Worked on a modern website using Next.js, React, TinaCMS, Tailwind CSS, TypeScript, Power Automate, and JotForm for content management. It provides a seamless content editing experience for the SSW team and fast loading time.',
     tech: ['Next.js', 'TinaCMS', 'Tailwind CSS', 'TypeScript', 'Power Automate', 'JotForm', 'GitHub Actions', 'Azure Pipelines', 'Azure App Service', 'IaC', 'Cloudflare', 'Docker', 'Node.js',
-      'Azure key vault'
+      'Azure key vault', 'Playwright'
     ],
     link: 'https://www.ssw.com.au',
     github: 'https://github.com/SSWConsulting/SSW.Website',
@@ -57,7 +57,7 @@ export const internalProducts: Project[] = [
   },
   {
     title: 'TinaDocs',
-    description: 'Built a documentation website using Next.js, GitHub Actions, TinaCMS, Tailwind CSS, and TypeScript. It provides a seamless content editing experience and best for template to use for your technical documentation.',
+    description: 'Worked on a documentation website using Next.js, GitHub Actions, TinaCMS, Tailwind CSS, and TypeScript. It provides a seamless content editing experience and best for template to use for your technical documentation.',
     tech: [ 'Next.js', 'GitHub Actions', 'TinaCMS', 'Tailwind CSS', 'TypeScript'],
     link: 'https://tina.io/tinadocs/docs',
     github: 'https://github.com/tinacms/tinadocs',

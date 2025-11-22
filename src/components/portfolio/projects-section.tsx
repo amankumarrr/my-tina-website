@@ -227,13 +227,44 @@ const ProjectCard = ({ project, index, category }: { project: Project; index: nu
             </Button>
           ) : (
             <>
-              <Button variant="outline" size="sm" className="flex-1">
-                <Github className="w-4 h-4 mr-2" />
-                Code
+              <Button 
+                variant="outline" 
+                size="sm" 
+                className="flex-1"
+                asChild
+              >
+                <a 
+                  href={project.github} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  onClick={(e) => {
+                    if (project.github === '#') {
+                      e.preventDefault();
+                    }
+                  }}
+                >
+                  <Github className="w-4 h-4 mr-2" />
+                  Code
+                </a>
               </Button>
-              <Button size="sm" className="flex-1">
-                <ExternalLink className="w-4 h-4 mr-2" />
-                Live
+              <Button 
+                size="sm" 
+                className="flex-1"
+                asChild
+              >
+                <a 
+                  href={project.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  onClick={(e) => {
+                    if (project.link === '#') {
+                      e.preventDefault();
+                    }
+                  }}
+                >
+                  <ExternalLink className="w-4 h-4 mr-2" />
+                  Live
+                </a>
               </Button>
             </>
           )}
