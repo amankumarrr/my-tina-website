@@ -1,4 +1,5 @@
 ---
-name: Llamantha
-avatar: /uploads/authors/llamantha.webp
+name: Aman Kumar
+avatar: /uploads/authors/napoleon.webp
 ---
+
